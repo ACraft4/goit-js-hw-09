@@ -21,7 +21,7 @@ const options = {
     defaultDate: new Date(),
     minuteIncrement: 1,
     onClose(selectedDates) {
-        console.log(selectedDates[0]);
+        
         if (selectedDates[0] < new Date()) {
             refs.timerInput.style.borderColor = 'red';
             Notiflix.Notify.failure('Please choose a date in the future');
@@ -33,10 +33,10 @@ const options = {
             refs.startBtn.addEventListener('click', () => {
                 let timeId = setInterval(() => {
                     const saveDate = convertMs(selectedDates[0] - new Date());
-                    refs.tDay = saveDate.days;
-                    refs.tHours = saveDate.hours;
-                    refs.tMinutes = saveDate.minutes;
-                    refs.tSeconds = saveDate.seconds;
+                    refs.tDay.textContent = saveDate.days;
+                    refs.tHours.textContent = saveDate.hours;
+                    refs.tMinutes.textContent = saveDate.minutes;
+                    refs.tSeconds.textContent = saveDate.seconds;
                     if ((selectedDates[0] - new Date()) < 1000) {
                         clearInterval(timeId);
                     }
