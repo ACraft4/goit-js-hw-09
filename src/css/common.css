@@ -16,3 +16,31 @@ img {
   display: block;
   max-width: 100%;
 }
+
+.switch_button {
+  background-color: ivory;
+  text-transform: uppercase;
+  border-radius: 5px;
+  border-style: none;
+  padding: 20px;
+  margin-top: 50px;
+  display: flex;
+}
+
+
+.timer {
+  margin-left: 5px;
+  display: flex;
+  text-align: center;
+}
+.field {
+  margin-right: 30px;
+}
+.value {
+  font-size: 40px;
+  display: flex;
+}
+.label {
+  text-transform: uppercase;
+  font-size: 18px;
+}
